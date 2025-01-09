@@ -88,5 +88,8 @@ let users: {name: string, age: number, avatarUrl?: string} = {name: "Rodrigo", a
 //undefined
 let value: number
 
-
+/* Union Types */
+let response: string | null
+response = "Pablo"
+response = null
 

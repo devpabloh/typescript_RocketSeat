@@ -63,3 +63,7 @@ let users = { name: "Rodrigo", age: 17 };
 /* diferença entre undefined e null */
 //undefined
 let value;
+/* Union Types */
+let response;
+response = "Pablo";
+response = null;
