@@ -37,3 +37,9 @@ let names = ["Pablo", "Henrique"];
 let numbers = [1, 2, 3, 4, 5, 6, 7];
 // inferência de tipo 
 let produtos = ["teclado", "mouse", "monitor",];
+/* Tipagem de funções */
+function sum(x, y) {
+    const result = x + y;
+    console.log(` Resultado é = ${result}`);
+}
+sum(4, 4);
