@@ -38,3 +38,11 @@ myFirstName = "Pablo"
 
 // Inferência de tipos - é quando o próprio typescript deduz o tipo da variável no momento que você declara a mesma
 let message = "Hello, how are you?" // Aqui o typescript atribuiu como string, se você tentar atribuir algum outro typo, vai dar erro
+
+/* Typo any */
+let mensagem1: any
+// Com o tipo any a variável aceita qualquer valor.
+mensagem1 = "Esse é um texto (string)"
+mensagem1 = 45
+mensagem1 = true
+
