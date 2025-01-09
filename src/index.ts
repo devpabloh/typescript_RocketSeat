@@ -61,9 +61,32 @@ function sum(x: number, y: number): number{
   return result
 }
 
+/* function signIn(email: string, password: string){
+  // lógica de conectar o usuário na aplicação.
+}
+
+signIn("Pablo@gmail.com", "123") */
+
+function signIn({email, password}: {email: string, password: string}){
+  // Lógica de conectar o usuário a aplicação.
+}
+
+signIn({email: "pablohenriqueadm94@gmail.com", password: "123456"})
+
 // Arrow function 
 const showMessage = (name:string):string =>{
   const message = `Olá ${name}`
   return message
 }
+
+/* Tipagem de objetos */
+// Observação: Quando passamos uma interrogação antes dos : quer dizer que aquele parametro é opcional
+let users: {name: string, age: number, avatarUrl?: string} = {name: "Rodrigo", age: 17}
+
+/* diferença entre undefined e null */
+
+//undefined
+let value: number
+
+
 
