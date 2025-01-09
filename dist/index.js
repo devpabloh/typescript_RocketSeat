@@ -67,3 +67,8 @@ let value;
 let response;
 response = "Pablo";
 response = null;
+function newProduct(Product) {
+}
+newProduct({ id: 1, name: "Produto X" });
+let teacher = { id: 1, name: "Rodrigo", subjects: ["Javascript", "Typescript"] };
+let student = { id: 2, name: "Pablo", age: 23 };

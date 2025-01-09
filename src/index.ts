@@ -93,3 +93,30 @@ let response: string | null
 response = "Pablo"
 response = null
 
+/* Conhecendo interface no typescript */
+// uma boa prática é declarar uma interface sempre utilizando letra maiúscula na primeira letra da palavra, outra boa prática é utilizar o I antes do nome da interface para mostrar que é uma interface
+interface Product {
+  id: number,
+  name: string
+}
+
+function newProduct(Product: Product){
+  
+}
+newProduct({id:1, name: "Produto X"})
+
+/* Como estender interfaces */
+interface Teacher{
+  id: number,
+  name: string,
+  subjects: string[]
+}
+
+interface Student{
+  id: number,
+  name: string,
+  age: number,
+}
+
+let teacher: Teacher = {id: 1, name: "Rodrigo", subjects: ["Javascript", "Typescript"]}
+let student: Student = {id: 2, name: "Pablo", age:23}
