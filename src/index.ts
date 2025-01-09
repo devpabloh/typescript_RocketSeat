@@ -5,11 +5,36 @@ const mensagem: string = "Olá, mundo!"
 // Consigo mudar?
 //mensagem = "typescript"
 
-// Consigo executar
-mensagem()
+// Consigo executar?
+//mensagem()
 
 const user = {
   name: "Pablo Henrique Ferreira de França",
   email: "pablohenriqueadm94@gmail.com"
 }
-console.log(user.avatar)
+console.log(user.name)
+
+/* Tipos primitivos */
+
+// String para texto
+let userName: string
+
+userName = "Pablo"
+
+// number para números
+let total: number
+
+total = 0
+total = 7.5
+
+// boolean para boleanos (true or false)
+
+/* Diferença entre inferência de tipos e tipagem explícita */
+
+// Typagem explícita
+let myFirstName: string
+
+myFirstName = "Pablo"
+
+// Inferência de tipos - é quando o próprio typescript deduz o tipo da variável no momento que você declara a mesma
+let message = "Hello, how are you?" // Aqui o typescript atribuiu como string, se você tentar atribuir algum outro typo, vai dar erro
