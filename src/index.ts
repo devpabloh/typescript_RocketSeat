@@ -46,3 +46,11 @@ mensagem1 = "Esse é um texto (string)"
 mensagem1 = 45
 mensagem1 = true
 
+/* Tipagem em arrays */
+// Tipagem explicita ou notação de tipo
+let names: string[] = ["Pablo", "Henrique"] 
+let numbers: number[] = [1,2,3,4,5,6,7]
+
+// inferência de tipo 
+let produtos = ["teclado", "mouse", "monitor",]
+
