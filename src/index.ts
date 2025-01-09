@@ -55,9 +55,15 @@ let numbers: number[] = [1,2,3,4,5,6,7]
 let produtos = ["teclado", "mouse", "monitor",]
 
 /* Tipagem de funções */
-function sum(x: number, y: number){
+function sum(x: number, y: number): number{
   const result = x + y
   console.log(` Resultado é = ${result}`)
+  return result
 }
 
-sum(4,4)
+// Arrow function 
+const showMessage = (name:string):string =>{
+  const message = `Olá ${name}`
+  return message
+}
+

@@ -41,5 +41,10 @@ let produtos = ["teclado", "mouse", "monitor",];
 function sum(x, y) {
     const result = x + y;
     console.log(` Resultado é = ${result}`);
+    return result;
 }
-sum(4, 4);
+// Arrow function 
+const showMessage = (name) => {
+    const message = `Olá ${name}`;
+    return message;
+};
