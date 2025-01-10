@@ -126,7 +126,7 @@ interface Student extends Person{
 let teacher: Teacher = {id: 1, name: "Rodrigo", subjects: ["Javascript", "Typescript"]}
 let student: Student = {id: 2, name: "Pablo", age:23}
 
-// Usando Type
+/*  Usando Type */
 type Product1 = {
   id: number,
   name: string
@@ -144,7 +144,7 @@ function selectProducts(): SelectResponse{
   return null
 }
 
-// Intersecção de tipos
+/*  Intersecção de tipos */
 type Person1 = {
   id: number,
   name: string
@@ -160,7 +160,7 @@ type Student1 = Person1 &{
 
 let teacher1: Teacher1
  
-// Interface x type
+/*  Interface x type */
 // Você pode subscrever Interface, mas não pode fazer o mesmo com types
 
 interface IBaseProduct {
@@ -184,13 +184,33 @@ type TProduct = TBaseProduct & {
 let product3: IProduct1 = {id: 1, name:"produto 1", price: 300}
 let product4: TProduct = {id: 2, name: "produto 2", price: 400}
 
-// Asserção de tipos
+ /* Asserção de tipos */
 type UserResponse = {
   id: number;
   name: string;
   avatar: string;
 }
 let userResponse = {} as UserResponse;
+
+ /* Restringir valores */
+//pode ser realizado através de tipos literais.
+
+type Size = "Small" | "Medium" | "Large"
+
+let size: Size
+size = "Medium"
+
+/* Enums */
+enum Profile{
+  Admin = 1,
+  Client = 2, 
+  Seller = 3
+}
+
+let profile4: number = Profile.Admin
+
+
+
 
 
  
