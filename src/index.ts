@@ -183,4 +183,14 @@ type TProduct = TBaseProduct & {
 
 let product3: IProduct1 = {id: 1, name:"produto 1", price: 300}
 let product4: TProduct = {id: 2, name: "produto 2", price: 400}
+
+// Asserção de tipos
+type UserResponse = {
+  id: number;
+  name: string;
+  avatar: string;
+}
+let userResponse = {} as UserResponse;
+
+
  
