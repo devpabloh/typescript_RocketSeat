@@ -209,6 +209,26 @@ enum Profile{
 
 let profile4: number = Profile.Admin
 
+/* Generic */
+
+function useState(){
+  let state: number;
+
+  function get(){
+    return state;
+  }
+
+  function set(newValue:number){
+    state = newValue;
+  }
+
+  return {get, set};  
+}
+
+let newState = useState()
+newState.get()
+newState.set(123)
+
 
 
 
