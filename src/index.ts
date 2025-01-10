@@ -160,4 +160,25 @@ type Student1 = Person1 &{
 
 let teacher1: Teacher1
  
+// Interface x type
+interface IBaseProduct {
+  price: number
+}
+
+interface IProduct1 extends IBaseProduct {
+  id: number,
+  name: string
+}
+
+type TBaseProduct = {
+  price: number
+}
+
+type TProduct = TBaseProduct & {
+  id: number,
+  name: string
+}
+
+let product3: IProduct1 = {id: 1, name:"produto 1", price: 300}
+let product4: TProduct = {id: 2, name: "produto 2", price: 400}
  
