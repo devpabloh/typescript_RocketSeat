@@ -106,15 +106,20 @@ function newProduct(Product: Product){
 newProduct({id:1, name: "Produto X"})
 
 /* Como estender interfaces */
-interface Teacher{
+interface Person{
   id: number,
   name: string,
+}
+
+interface Teacher extends Person{
+  // id: number,
+  // name: string,
   subjects: string[]
 }
 
-interface Student{
-  id: number,
-  name: string,
+interface Student extends Person{
+   // id: number,
+  // name: string,
   age: number,
 }
 
