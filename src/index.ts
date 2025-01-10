@@ -143,3 +143,21 @@ type SelectResponse = Product1[] | null
 function selectProducts(): SelectResponse{
   return null
 }
+
+// Intersecção de tipos
+type Person1 = {
+  id: number,
+  name: string
+}
+
+type Teacher1 = Person1 & {
+  subjects: string[]
+}
+
+type Student1 = Person1 &{
+  age: number
+}
+
+let teacher1: Teacher1
+ 
+ 
