@@ -161,6 +161,8 @@ type Student1 = Person1 &{
 let teacher1: Teacher1
  
 // Interface x type
+// Você pode subscrever Interface, mas não pode fazer o mesmo com types
+
 interface IBaseProduct {
   price: number
 }
