@@ -126,12 +126,6 @@ interface Student extends Person{
 let teacher: Teacher = {id: 1, name: "Rodrigo", subjects: ["Javascript", "Typescript"]}
 let student: Student = {id: 2, name: "Pablo", age:23}
 
-<<<<<<< HEAD
-// Usando type
-function newProduct1(product: string){
-
-}
-=======
 /*  Usando Type */
 type Product1 = {
   id: number,
@@ -216,28 +210,45 @@ enum Profile{
 let profile4: number = Profile.Admin
 
 /* Generic */
+/* 
+  * S => state
+  * T => type
+  * K => Key
+  * V => Value
+  * E => element
+*/
 
-function useState(){
-  let state: number;
+function useState<T extends number | string>(){
+  let state: T;
 
   function get(){
     return state;
   }
 
-  function set(newValue:number){
+  function set(newValue:T){
     state = newValue;
   }
 
   return {get, set};  
 }
 
-let newState = useState()
+let newState = useState<number>()
 newState.get()
 newState.set(123)
+newState.set("Pablo Henrique")
 
+/* Utilitários */
+// Partial
+interface Usuario {
+  id: number,
+  name: string;
+  email: string
+}
 
+let newUsuario2: Usuario = {
+  id:1,
+  name: "Pablo Henrique",
+  email: "pablohenriqueadm94@gmail.com"
+}
 
-
-
- 
->>>>>>> 804bfe0aa251866542bace695565d5bbde053d09
+let updateUsuario2: Partial<Usuario> = { name: "Pablo Henrique Ferreira de França"} // o uso do partial faz com que a gente possa colocar apenas as propriedades que quisermos, sem o typescript ficar solicitando que seja colocada todas as propriedades.
