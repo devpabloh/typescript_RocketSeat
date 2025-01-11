@@ -125,3 +125,8 @@ interface Student extends Person{
 
 let teacher: Teacher = {id: 1, name: "Rodrigo", subjects: ["Javascript", "Typescript"]}
 let student: Student = {id: 2, name: "Pablo", age:23}
+
+// Usando type
+function newProduct1(product: string){
+
+}
