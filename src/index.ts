@@ -252,3 +252,11 @@ let newUsuario2: Usuario = {
 }
 
 let updateUsuario2: Partial<Usuario> = { name: "Pablo Henrique Ferreira de França"} // o uso do partial faz com que a gente possa colocar apenas as propriedades que quisermos, sem o typescript ficar solicitando que seja colocada todas as propriedades.
+
+interface IBook{
+  title: string,
+  pages: number,
+  author: string
+}
+
+const book:Pick<IBook, "title" | "author"> = {title: "O Senhor dos Anéis", author:"Kid"} // podemos usar o pick na interface criada, passando entre as aspas qual das propriedades a gente quer pegar e passar naquela variavel, se quiser adicionar mais de uma propriedade podemos usar o | ou &&.
