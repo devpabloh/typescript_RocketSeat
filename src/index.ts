@@ -300,4 +300,19 @@ const users1: Record<number, IUser> = {
 
 }
 
+/* Type of */
+// Definindo uma typagem a partir de algo.
+interface IProductA{
+  id: number,
+  name: string,
+  quantify: number
+}
+
+const productA: IProductA = {id: 1, name: "Produto 1", quantify: 4} 
+const productB: typeof productA = {id: 2, name: "produto 2", quantify: 2} // o typeof pega a tipagem do productA e passa para o productB.
+
+
+
+
+
 
