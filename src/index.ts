@@ -260,3 +260,12 @@ interface IBook{
 }
 
 const book:Pick<IBook, "title" | "author"> = {title: "O Senhor dos Anéis", author:"Kid"} // podemos usar o pick na interface criada, passando entre as aspas qual das propriedades a gente quer pegar e passar naquela variavel, se quiser adicionar mais de uma propriedade podemos usar o | ou &&.
+
+interface Book{
+  title: string
+  pages: number
+  author: string
+  description: string
+}
+
+const book1: Omit<Book, "description" | "pages"> = {title: "O Senhor dos Anéis", author: "J.R.R. Tolkien"} // o omit faz o contrário do pick, ele pega todas as propriedades menos as que você passar. ou seja, ele omite as propriedades que você passar.
