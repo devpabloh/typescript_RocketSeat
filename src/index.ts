@@ -261,6 +261,8 @@ interface IBook{
 
 const book:Pick<IBook, "title" | "author"> = {title: "O Senhor dos Anéis", author:"Kid"} // podemos usar o pick na interface criada, passando entre as aspas qual das propriedades a gente quer pegar e passar naquela variavel, se quiser adicionar mais de uma propriedade podemos usar o | ou &&.
 
+/* Omit */
+
 interface Book{
   title: string
   pages: number
@@ -269,3 +271,33 @@ interface Book{
 }
 
 const book1: Omit<Book, "description" | "pages"> = {title: "O Senhor dos Anéis", author: "J.R.R. Tolkien"} // o omit faz o contrário do pick, ele pega todas as propriedades menos as que você passar. ou seja, ele omite as propriedades que você passar.
+
+/* Record */
+// Cria um objeto no qual todas as chaves são textos e os valores são números.
+const scores: Record<string, number>={
+  "Pablo": 10,
+  "Henrique": 9,
+  "Ferreira": 8
+}
+
+// Utilizando o Record para limitar valores
+type Profile1 = "admin" | "user" | "guest"
+
+const user1: Record<Profile1, number> = {
+  "admin": 1,
+  "user": 2,
+  "guest": 3,
+}
+
+interface IUser {
+  name: string,
+  email: string
+}
+
+const users1: Record<number, IUser> = {
+  1: { name: "Pablo", email: "pablohenriqueadm94@gmail.com"},
+  2: {name: "Rodrigo", email: "rodrigo@gmail.com"}
+
+}
+
+
