@@ -311,6 +311,19 @@ interface IProductA{
 const productA: IProductA = {id: 1, name: "Produto 1", quantify: 4} 
 const productB: typeof productA = {id: 2, name: "produto 2", quantify: 2} // o typeof pega a tipagem do productA e passa para o productB.
 
+/* keyof */
+// O operador keyof cria um tipo que representa todas as chaves de um objeto.
+const icons = {
+  "nome": "./path/home.svg",
+  "add": "./path/add.svg",
+  "remove": "./path/remove.svg"
+}
+
+type Icon = keyof typeof icons; // Icon será "nome" | "add" | "remove"
+
+const icon: Icon = "add"; // válido
+// const invalidIcon: Icon = "edit"; // inválido, pois "edit" não é uma chave em icons
+
 
 
 
